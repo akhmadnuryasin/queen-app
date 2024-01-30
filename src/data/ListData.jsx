@@ -1,44 +1,24 @@
 const ListData = [
   {
-    key: "menu",
-    label: "Menu",
+    key: "whatsapp",
+    label: "Whatsapp",
   },
   {
-    key: "online-order",
-    label: "Online Order",
+    key: "instagram",
+    label: "Instagram",
   },
+
   {
-    key: "our-story",
-    label: "Our Story",
+    key: "price-list",
+    label: "Price List",
   },
   {
     key: "location",
     label: "Locations",
   },
-
   {
-    key: "a",
-    label: "Locations",
-  },
-  {
-    key: "b",
-    label: "Locations",
-  },
-  {
-    key: "n",
-    label: "Locations",
-  },
-  {
-    key: "s",
-    label: "Locations",
-  },
-  {
-    key: "r",
-    label: "Locations",
-  },
-  {
-    key: "t",
-    label: "Locations",
+    key: "tiktok",
+    label: "Tiktok",
   },
 ];
 
