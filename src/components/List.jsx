@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaTiktok,
+  FaMapMarkerAlt,
+  FaListAlt,
+} from "react-icons/fa";
 
 const List = (props) => {
+  const [isHovered, setHovered] = useState(false);
   const handleButtonClick = () => {
     switch (props.label.toLowerCase()) {
       case "whatsapp":
@@ -18,7 +27,7 @@ const List = (props) => {
         break;
       case "locations":
         window.open(
-          "https://www.google.com/maps/place/Alun-Alun+Wonosobo/@-7.3587852,109.9005179,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7aa0ff266df64d:0xbb86598aeb9508b!8m2!3d-7.3587905!4d109.9030928!16s%2Fg%2F1pzw6pzsw?hl=id&entry=tts",
+          "https://www.google.com/maps/place/7%C2%B025'12.5%22S+109%C2%B053'31.4%22E/@-7.42015,109.89206,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-7.42015!4d109.89206?hl=id&entry=ttu",
           "_blank"
         );
         break;
@@ -30,13 +39,50 @@ const List = (props) => {
     }
   };
 
+  const getIcon = () => {
+    switch (props.label.toLowerCase()) {
+      case "whatsapp":
+        return <FaWhatsapp />;
+      case "instagram":
+        return <FaInstagram />;
+      case "tiktok":
+        return <FaTiktok />;
+      case "locations":
+        return <FaMapMarkerAlt />;
+      case "price list":
+        return <FaListAlt />;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <Button
-      className="w-full my-2 bg-transparent hover:bg-[#061492] text-[#061492] hover:text-white border-small border-[#061492] rounded-md h-12 relative"
-      onClick={handleButtonClick}
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="w-full my-2"
     >
-      <span className="flex items-center justify-center">{props.label}</span>
-    </Button>
+      <Button
+        className="button-style"
+        onClick={handleButtonClick}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        <span className="flex items-center justify-center space-x-2">
+          {isHovered && (
+            <motion.span
+              className="icon"
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {getIcon()}
+            </motion.span>
+          )}
+          <span className="label">{props.label}</span>
+        </span>
+      </Button>
+    </motion.div>
   );
 };
 

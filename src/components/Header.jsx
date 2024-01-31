@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Avatar } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const beautifulWords = ["Beautiful", "Stunning", "Gorgeous", "Elegant"];
@@ -14,7 +15,12 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-[260px] text-center text-[#061492]">
+    <motion.div
+      className="w-full max-w-[260px] text-center text-[#061492]"
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
       <div className="w-full flex justify-center mb-2">
         <Avatar
           src="/logo3.jpg"
@@ -32,7 +38,7 @@ const Header = () => {
           day
         </h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

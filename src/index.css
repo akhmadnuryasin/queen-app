@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
+.button-style {
+  width: 100%;
+  background-color: #061492;
+  color: #ffffff;
+  border: 2px solid #b5c7d3;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-style:hover {
+  background-color: #4c5c7f;
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 20px;
+  margin-left: 4px;
+  opacity: 0;
+}
+
+.label {
+  font-size: 16px;
 }
