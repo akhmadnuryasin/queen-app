@@ -49,7 +49,7 @@ const List = (props) => {
         return <FaTiktok />;
       case "locations":
         return <FaMapMarkerAlt />;
-      case "price list":
+      case "pricelist":
         return <FaListAlt />;
       default:
         return null;

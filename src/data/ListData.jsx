@@ -9,8 +9,8 @@ const ListData = [
   },
 
   {
-    key: "price-list",
-    label: "Price List",
+    key: "pricelist",
+    label: "Pricelist",
   },
   {
     key: "location",
