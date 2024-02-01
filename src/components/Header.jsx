@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Avatar } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import { useTheme } from "./ThemeContext";
 
 const Header = () => {
   const beautifulWords = ["Beautiful", "Stunning", "Gorgeous", "Elegant"];
   const [beautifulIndex, setBeautifulIndex] = useState(0);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,8 +34,14 @@ const Header = () => {
         />
       </div>
       <div className="px-4">
-        <h1 className="font-bold text-xl">Queen Bouquet</h1>
-        <h2 className="text-tiny">
+        <h1
+          className={`font-bold text-xl  ${
+            theme === "dark" ? "text-white" : "text-black"
+          }`}
+        >
+          Queen Bouquet
+        </h1>
+        <h2 className="text-tiny text-[#8b99ae]">
           Something {beautifulWords[beautifulIndex].toLowerCase()} for a good
           day
         </h2>

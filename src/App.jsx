@@ -5,20 +5,13 @@ import List from "./components/List";
 import ListData from "./data/ListData";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
-const LoadingText = () => (
-  <motion.div
-    className="text-3xl font-sambutan mb-4"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 1, ease: "easeInOut" }}
-  >
-    Hallo 😇, Selamat datang di Queen Bouquet
-  </motion.div>
-);
+import ThemeToogle from "./components/ThemeToogle";
+import { useTheme } from "./components/ThemeContext";
+import LoadingText from "./components/LoadingText";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -49,7 +42,12 @@ const App = () => {
   };
 
   return (
-    <div className="h-[100vh] p-6 flex justify-center items-center flex-col w-full">
+    <div
+      className={`h-[100vh] p-6 flex ${
+        theme === "dark" ? "bg-[#0f172a]" : "bg-white"
+      } justify-center items-center flex-col w-full`}
+    >
+      <ThemeToogle />
       {isLoading ? (
         <motion.div
           initial={{ opacity: 0, y: -20 }}

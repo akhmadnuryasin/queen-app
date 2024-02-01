@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import { useTheme } from "./ThemeContext";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -11,6 +12,7 @@ import {
 
 const List = (props) => {
   const [isHovered, setHovered] = useState(false);
+  const { theme } = useTheme();
   const handleButtonClick = () => {
     switch (props.label.toLowerCase()) {
       case "whatsapp":
@@ -63,7 +65,11 @@ const List = (props) => {
       className="w-full my-2"
     >
       <Button
-        className="button-style"
+        className={`w-full bg-transparent border-2 rounded-md ${
+          theme === "dark"
+            ? "hover:text-white hover:border-[#bbc3ce] text-[#6d7a8f] border-[#455367]"
+            : "hover:text-black hover:border-[#000000] text-[#0f172a] border-[#0f172a]"
+        }`}
         onClick={handleButtonClick}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -71,7 +77,7 @@ const List = (props) => {
         <span className="flex items-center justify-center space-x-2">
           {isHovered && (
             <motion.span
-              className="icon"
+              className="ml-1 text-xl"
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3 }}
@@ -79,7 +85,7 @@ const List = (props) => {
               {getIcon()}
             </motion.span>
           )}
-          <span className="label">{props.label}</span>
+          <span className="text-base">{props.label}</span>
         </span>
       </Button>
     </motion.div>

@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <div className="text-center">
-      <p className="text-sm text-[#061492]">
+      <p className="text-sm text-[#8b99ae]">
         &copy; {currentYear} Queen Bouquet.
         <br /> All rights reserved.
       </p>
