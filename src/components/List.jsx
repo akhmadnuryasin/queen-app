@@ -127,107 +127,515 @@ const List = (props) => {
             <>
               <ModalHeader className="flex flex-col gap-1 px-[55px]"></ModalHeader>
               <ModalBody>
-                <div className="max-w-full gap-2 grid grid-cols-12 grid-rows-2 px-8 my-5">
-                  <Card
-                    isFooterBlurred
-                    className="w-full h-[300px] col-span-12 sm:col-span-5"
+                <div className="grid gap-6 mt-6 mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+                  <div
+                    className={`border border-slate-400 px-6 py-4 transition-colors duration-300 transform rounded-lg ${
+                      theme === "dark"
+                        ? "hover:bg-gray-800"
+                        : "hover:bg-gray-200"
+                    }`}
                   >
-                    <CardHeader className="absolute z-10 top-1 flex-col h-full flex justify-center items-center">
-                      <p className="text-tiny text-black uppercase font-bold">
-                        Pricelist 1
-                      </p>
-                    </CardHeader>
-                  </Card>
-                  <Card
-                    isFooterBlurred
-                    className="w-full h-[300px] col-span-12 sm:col-span-7"
+                    <p
+                      className={`text-lg font-medium ${
+                        theme === "dark" ? "text-gray-100" : "text-gray-800"
+                      }`}
+                    >
+                      Money Bouquet
+                    </p>
+                    <h4
+                      className={`mt-2 text-3xl font-semibold ${
+                        theme === "dark" ? "text-gray-100" : "text-gray-800"
+                      }`}
+                    >
+                      50k - 90k{" "}
+                      <span className="text-base font-normal text-gray-600 dark:text-gray-400">
+                        / Pcs
+                      </span>
+                    </h4>
+                    <p className="mt-4 text-gray-500 dark:text-gray-300">
+                      For most businesses that want to optimaize web queries.
+                    </p>
+                    <div className="mt-8 space-y-8">
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          All limited links
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Own analytics platform
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Chat support
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Optimize hashtags
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Unlimited users
+                        </span>
+                      </div>
+                    </div>
+                    <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                      Pilih Paket
+                    </button>
+                  </div>
+                  <div
+                    className={`border border-slate-400 px-6 py-4 transition-colors duration-300 transform rounded-lg ${
+                      theme === "dark"
+                        ? "hover:bg-gray-800"
+                        : "hover:bg-gray-200"
+                    }`}
                   >
-                    <CardHeader className="absolute z-10 top-1 flex-col items-start"></CardHeader>
-                    <Image
-                      removeWrapper
-                      alt="Relaxing app background"
-                      className="z-0 w-full h-full object-cover"
-                      src="./1.jpg"
-                    />
-                  </Card>
-                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
-                    <Image
-                      removeWrapper
-                      alt="Card background"
-                      className="z-0 w-full h-full object-cover"
-                      src="./2.jpg"
-                    />
-                  </Card>
-                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
-                    <Image
-                      removeWrapper
-                      alt="Card background"
-                      className="z-0 w-full h-full object-cover"
-                      src="./3.jpg"
-                    />
-                  </Card>
-                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
-                    <Image
-                      removeWrapper
-                      alt="Card background"
-                      className="z-0 w-full h-full object-cover"
-                      src="./4.jpg"
-                    />
-                  </Card>
-                </div>
-                <div className="max-w-full gap-2 grid grid-cols-12 grid-rows-2 px-8 my-5">
-                  <Card
-                    isFooterBlurred
-                    className={`w-full h-[300px] col-span-12 sm:col-span-5`}
+                    <p
+                      className={`text-lg font-medium ${
+                        theme === "dark" ? "text-gray-100" : "text-gray-800"
+                      }`}
+                    >
+                      Money Bouquet
+                    </p>
+                    <h4
+                      className={`mt-2 text-3xl font-semibold ${
+                        theme === "dark" ? "text-gray-100" : "text-gray-800"
+                      }`}
+                    >
+                      50k - 90k{" "}
+                      <span className="text-base font-normal text-gray-600 dark:text-gray-400">
+                        / Pcs
+                      </span>
+                    </h4>
+                    <p className="mt-4 text-gray-500 dark:text-gray-300">
+                      For most businesses that want to optimaize web queries.
+                    </p>
+                    <div className="mt-8 space-y-8">
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          All limited links
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Own analytics platform
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Chat support
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Optimize hashtags
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Unlimited users
+                        </span>
+                      </div>
+                    </div>
+                    <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                      Pilih Paket
+                    </button>
+                  </div>
+                  <div
+                    className={`border border-slate-400 px-6 py-4 transition-colors duration-300 transform rounded-lg ${
+                      theme === "dark"
+                        ? "hover:bg-gray-800"
+                        : "hover:bg-gray-200"
+                    }`}
                   >
-                    <CardHeader className="absolute z-10 top-1 flex-col h-full flex justify-center items-center">
-                      <p className="text-tiny text-black uppercase font-bold">
-                        Pricelist 2
-                      </p>
-                    </CardHeader>
-                  </Card>
-                  <Card
-                    isFooterBlurred
-                    className="w-full h-[300px] col-span-12 sm:col-span-7"
+                    <p
+                      className={`text-lg font-medium ${
+                        theme === "dark" ? "text-gray-100" : "text-gray-800"
+                      }`}
+                    >
+                      Money Bouquet
+                    </p>
+                    <h4
+                      className={`mt-2 text-3xl font-semibold ${
+                        theme === "dark" ? "text-gray-100" : "text-gray-800"
+                      }`}
+                    >
+                      50k - 90k{" "}
+                      <span className="text-base font-normal text-gray-600 dark:text-gray-400">
+                        / Pcs
+                      </span>
+                    </h4>
+                    <p className="mt-4 text-gray-500 dark:text-gray-300">
+                      For most businesses that want to optimaize web queries.
+                    </p>
+                    <div className="mt-8 space-y-8">
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          All limited links
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Own analytics platform
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Chat support
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Optimize hashtags
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Unlimited users
+                        </span>
+                      </div>
+                    </div>
+                    <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                      Pilih Paket
+                    </button>
+                  </div>
+                  <div
+                    className={`border border-slate-400 px-6 py-4 transition-colors duration-300 transform rounded-lg ${
+                      theme === "dark"
+                        ? "hover:bg-gray-800"
+                        : "hover:bg-gray-200"
+                    }`}
                   >
-                    <CardHeader className="absolute z-10 top-1 flex-col items-start"></CardHeader>
-                    <Image
-                      removeWrapper
-                      alt="Relaxing app background"
-                      className="z-0 w-full h-full object-cover"
-                      src="./1.jpg"
-                    />
-                  </Card>
-                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
-                    <Image
-                      removeWrapper
-                      alt="Card background"
-                      className="z-0 w-full h-full object-cover"
-                      src="./2.jpg"
-                    />
-                  </Card>
-                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
-                    <Image
-                      removeWrapper
-                      alt="Card background"
-                      className="z-0 w-full h-full object-cover"
-                      src="./3.jpg"
-                    />
-                  </Card>
-                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
-                    <Image
-                      removeWrapper
-                      alt="Card background"
-                      className="z-0 w-full h-full object-cover"
-                      src="./4.jpg"
-                    />
-                  </Card>
+                    <p
+                      className={`text-lg font-medium ${
+                        theme === "dark" ? "text-gray-100" : "text-gray-800"
+                      }`}
+                    >
+                      Money Bouquet
+                    </p>
+                    <h4
+                      className={`mt-2 text-3xl font-semibold ${
+                        theme === "dark" ? "text-gray-100" : "text-gray-800"
+                      }`}
+                    >
+                      50k - 90k{" "}
+                      <span className="text-base font-normal text-gray-600 dark:text-gray-400">
+                        / Pcs
+                      </span>
+                    </h4>
+                    <p className="mt-4 text-gray-500 dark:text-gray-300">
+                      For most businesses that want to optimaize web queries.
+                    </p>
+                    <div className="mt-8 space-y-8">
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          All limited links
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Own analytics platform
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Chat support
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Optimize hashtags
+                        </span>
+                      </div>
+
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5 text-blue-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="mx-4 text-gray-700 dark:text-gray-300">
+                          Unlimited users
+                        </span>
+                      </div>
+                    </div>
+                    <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                      Pilih Paket
+                    </button>
+                  </div>
                 </div>
               </ModalBody>
               <ModalFooter></ModalFooter>
