@@ -9,10 +9,19 @@ import {
   FaMapMarkerAlt,
   FaListAlt,
 } from "react-icons/fa";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from "@nextui-org/react";
 
 const List = (props) => {
   const [isHovered, setHovered] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
   const { theme } = useTheme();
+
   const handleButtonClick = () => {
     switch (props.label.toLowerCase()) {
       case "whatsapp":
@@ -33,8 +42,8 @@ const List = (props) => {
           "_blank"
         );
         break;
-      case "price list":
-        alert("Dalam Tahap Pengembangan");
+      case "pricelist":
+        setModalOpen(true);
         break;
       default:
         console.log(`Button ${props.label} clicked`);
@@ -59,36 +68,67 @@ const List = (props) => {
   };
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="w-full my-2"
-    >
-      <Button
-        className={`w-full bg-transparent border-2 rounded-md ${
-          theme === "dark"
-            ? "hover:text-white hover:border-[#bbc3ce] text-[#6d7a8f] border-[#455367]"
-            : "hover:text-black hover:border-[#000000] text-[#0f172a] border-[#0f172a]"
-        }`}
-        onClick={handleButtonClick}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+    <div>
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-full my-2"
       >
-        <span className="flex items-center justify-center space-x-2">
-          {isHovered && (
-            <motion.span
-              className="ml-1 text-xl"
-              initial={{ opacity: 0, x: 10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {getIcon()}
-            </motion.span>
+        <Button
+          className={`w-full bg-transparent border-2 rounded-md ${
+            theme === "dark"
+              ? "hover:text-white hover:border-[#bbc3ce] text-[#6d7a8f] border-[#455367]"
+              : "hover:text-black hover:border-[#000000] text-[#0f172a] border-[#0f172a]"
+          }`}
+          onClick={handleButtonClick}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          <span className="flex items-center justify-center space-x-2">
+            {isHovered && (
+              <motion.span
+                className="ml-1 text-xl"
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {getIcon()}
+              </motion.span>
+            )}
+            <span className="text-base">{props.label}</span>
+          </span>
+        </Button>
+      </motion.div>
+
+      <Modal
+        backdrop="opaque"
+        isOpen={isModalOpen}
+        size="full"
+        onOpenChange={() => setModalOpen(!isModalOpen)}
+        classNames={{
+          backdrop:
+            "bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20",
+        }}
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Pricelist
+              </ModalHeader>
+              <ModalBody>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam pulvinar risus non risus hendrerit venenatis.
+                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
+                </p>
+              </ModalBody>
+              <ModalFooter></ModalFooter>
+            </>
           )}
-          <span className="text-base">{props.label}</span>
-        </span>
-      </Button>
-    </motion.div>
+        </ModalContent>
+      </Modal>
+    </div>
   );
 };
 
