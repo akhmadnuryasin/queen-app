@@ -17,6 +17,14 @@ import {
   ModalFooter,
 } from "@nextui-org/react";
 
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Image,
+} from "@nextui-org/react";
+
 const List = (props) => {
   const [isHovered, setHovered] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
@@ -110,18 +118,117 @@ const List = (props) => {
             "bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20",
         }}
       >
-        <ModalContent>
+        <ModalContent
+          className={`overflow-auto ${
+            theme === "dark" ? "bg-[#0f172a]" : "bg-white"
+          }`}
+        >
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
-                Pricelist
-              </ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 px-[55px]"></ModalHeader>
               <ModalBody>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
+                <div className="max-w-full gap-2 grid grid-cols-12 grid-rows-2 px-8 my-5">
+                  <Card
+                    isFooterBlurred
+                    className="w-full h-[300px] col-span-12 sm:col-span-5"
+                  >
+                    <CardHeader className="absolute z-10 top-1 flex-col h-full flex justify-center items-center">
+                      <p className="text-tiny text-black uppercase font-bold">
+                        Pricelist 1
+                      </p>
+                    </CardHeader>
+                  </Card>
+                  <Card
+                    isFooterBlurred
+                    className="w-full h-[300px] col-span-12 sm:col-span-7"
+                  >
+                    <CardHeader className="absolute z-10 top-1 flex-col items-start"></CardHeader>
+                    <Image
+                      removeWrapper
+                      alt="Relaxing app background"
+                      className="z-0 w-full h-full object-cover"
+                      src="./1.jpg"
+                    />
+                  </Card>
+                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
+                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
+                    <Image
+                      removeWrapper
+                      alt="Card background"
+                      className="z-0 w-full h-full object-cover"
+                      src="./2.jpg"
+                    />
+                  </Card>
+                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
+                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
+                    <Image
+                      removeWrapper
+                      alt="Card background"
+                      className="z-0 w-full h-full object-cover"
+                      src="./3.jpg"
+                    />
+                  </Card>
+                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
+                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
+                    <Image
+                      removeWrapper
+                      alt="Card background"
+                      className="z-0 w-full h-full object-cover"
+                      src="./4.jpg"
+                    />
+                  </Card>
+                </div>
+                <div className="max-w-full gap-2 grid grid-cols-12 grid-rows-2 px-8 my-5">
+                  <Card
+                    isFooterBlurred
+                    className={`w-full h-[300px] col-span-12 sm:col-span-5`}
+                  >
+                    <CardHeader className="absolute z-10 top-1 flex-col h-full flex justify-center items-center">
+                      <p className="text-tiny text-black uppercase font-bold">
+                        Pricelist 2
+                      </p>
+                    </CardHeader>
+                  </Card>
+                  <Card
+                    isFooterBlurred
+                    className="w-full h-[300px] col-span-12 sm:col-span-7"
+                  >
+                    <CardHeader className="absolute z-10 top-1 flex-col items-start"></CardHeader>
+                    <Image
+                      removeWrapper
+                      alt="Relaxing app background"
+                      className="z-0 w-full h-full object-cover"
+                      src="./1.jpg"
+                    />
+                  </Card>
+                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
+                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
+                    <Image
+                      removeWrapper
+                      alt="Card background"
+                      className="z-0 w-full h-full object-cover"
+                      src="./2.jpg"
+                    />
+                  </Card>
+                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
+                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
+                    <Image
+                      removeWrapper
+                      alt="Card background"
+                      className="z-0 w-full h-full object-cover"
+                      src="./3.jpg"
+                    />
+                  </Card>
+                  <Card className="col-span-12 sm:col-span-4 h-[300px]">
+                    <CardHeader className="absolute z-10 top-1 flex-col !items-start"></CardHeader>
+                    <Image
+                      removeWrapper
+                      alt="Card background"
+                      className="z-0 w-full h-full object-cover"
+                      src="./4.jpg"
+                    />
+                  </Card>
+                </div>
               </ModalBody>
               <ModalFooter></ModalFooter>
             </>
