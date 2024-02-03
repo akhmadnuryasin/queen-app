@@ -11,7 +11,9 @@ const LoadingText = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeInOut" }}
     >
-      <p className={`${theme === "dark" ? "text-white" : "text-black"}`}>
+      <p
+        className={`${theme === "dark" ? "text-white" : "text-black"} sambutan`}
+      >
         Hallo 😇, Selamat datang di Queen Bouquet
       </p>
     </motion.div>
