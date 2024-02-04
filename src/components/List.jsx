@@ -127,533 +127,234 @@ const List = (props) => {
             <>
               <ModalHeader className="flex flex-col gap-1 px-[55px]"></ModalHeader>
               <ModalBody>
-                <div className="grid gap-6 mt-6 mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
-                  <div
-                    className={`border border-slate-400 px-6 py-4 transition-colors duration-300 transform rounded-lg ${
-                      theme === "dark"
-                        ? "hover:bg-gray-800"
-                        : "hover:bg-gray-200"
-                    }`}
-                  >
-                    <p
-                      className={`text-lg font-medium ${
-                        theme === "dark" ? "text-gray-100" : "text-gray-800"
-                      }`}
+                <div className="px-11">
+                  <div className="grid gap-6 mt-16 -mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+                    <div
+                      className={`flex flex-col w-full p-8 space-y-8 text-center border-2 border-gray-200 rounded-lg ${
+                        theme === "dark"
+                          ? "bg-[#0f172a] border-gray-700"
+                          : "bg-white border-gray-200"
+                      } `}
                     >
-                      Money Bouquet
-                    </p>
-                    <h4
-                      className={`mt-2 text-3xl font-semibold ${
-                        theme === "dark" ? "text-gray-100" : "text-gray-800"
-                      }`}
-                    >
-                      50k - 90k{" "}
-                      <span className="text-base font-normal text-gray-600 dark:text-gray-400">
-                        / Pcs
-                      </span>
-                    </h4>
-                    <p className="mt-4 text-gray-500 dark:text-gray-300">
-                      For most businesses that want to optimaize web queries.
-                    </p>
-                    <div className="mt-8 space-y-8">
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
+                      <div className="flex-shrink-0">
+                        <h2
+                          className={`inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg ${
+                            theme === "dark" ? "bg-gray-700" : "bg-gray-50"
+                          } `}
                         >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                          Flower bouquet
+                        </h2>
+                      </div>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Garansi tepat waktu
+                      <div className="flex-shrink-0">
+                        <span
+                          className={`pt-2 text-3xl font-bold  uppercase  ${
+                            theme === "dark" ? "text-gray-100" : "text-gray-800"
+                          } `}
+                        >
+                          Start From
                         </span>
                       </div>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                      <ul className="flex-1 space-y-4">
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Mini flowers 15cm 15k/ minimal 5pcs
+                        </li>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Pengantar sesuai perjanjian
-                        </span>
-                      </div>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Size S 55K
+                        </li>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="w-5 h-5 text-red-400"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Size M 85K
+                        </li>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Size L 125K
+                        </li>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Size XL 160K
+                        </li>
+                      </ul>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          By request
-                        </span>
-                      </div>
-
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="w-5 h-5 text-red-400"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Tag card puisi
-                        </span>
-                      </div>
-
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="w-5 h-5 text-red-400"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Terima jadi
-                        </span>
-                      </div>
+                      <button
+                        onClick={() => {
+                          window.open("https://wa.me/6283865422026", "_blank");
+                        }}
+                        className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none"
+                      >
+                        Pilih Paket
+                      </button>
                     </div>
-                    <button
-                      onClick={() => {
-                        window.open("https://wa.me/6283865422026", "_blank");
-                      }}
-                      className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+                    <div
+                      className={`flex flex-col w-full p-8 space-y-8 text-center border-2 border-gray-200 rounded-lg ${
+                        theme === "dark"
+                          ? "bg-[#0f172a] border-gray-700"
+                          : "bg-white border-gray-200"
+                      } `}
                     >
-                      Pilih Paket
-                    </button>
-                  </div>
-                  <div
-                    className={`border border-slate-400 px-6 py-4 transition-colors duration-300 transform rounded-lg ${
-                      theme === "dark"
-                        ? "hover:bg-gray-800"
-                        : "hover:bg-gray-200"
-                    }`}
-                  >
-                    <p
-                      className={`text-lg font-medium ${
-                        theme === "dark" ? "text-gray-100" : "text-gray-800"
-                      }`}
-                    >
-                      Flower Bouquet
-                    </p>
-                    <h4
-                      className={`mt-2 text-3xl font-semibold ${
-                        theme === "dark" ? "text-gray-100" : "text-gray-800"
-                      }`}
-                    >
-                      50k - 90k{" "}
-                      <span className="text-base font-normal text-gray-600 dark:text-gray-400">
-                        / Pcs
-                      </span>
-                    </h4>
-                    <p className="mt-4 text-gray-500 dark:text-gray-300">
-                      For most businesses that want to optimaize web queries.
-                    </p>
-                    <div className="mt-8 space-y-8">
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
+                      <div className="flex-shrink-0">
+                        <h2
+                          className={`inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg ${
+                            theme === "dark" ? "bg-gray-700" : "bg-gray-50"
+                          } `}
                         >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                          Snack Bouquet
+                        </h2>
+                      </div>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Garansi tepat waktu
+                      <div className="flex-shrink-0">
+                        <span
+                          className={`pt-2 text-3xl font-bold  uppercase  ${
+                            theme === "dark" ? "text-gray-100" : "text-gray-800"
+                          } `}
+                        >
+                          Start From
                         </span>
                       </div>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                      <ul className="flex-1 space-y-4">
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Random Snack size S 35K
+                        </li>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Pengantar sesuai perjanjian
-                        </span>
-                      </div>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Random Snack size M 55K
+                        </li>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Bebas request budget
+                        </li>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Bebas request warna warping
+                        </li>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Bebas reques isi snack
+                        </li>
+                      </ul>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          By request
-                        </span>
-                      </div>
-
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="w-5 h-5 text-red-400"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Tag card puisi
-                        </span>
-                      </div>
-
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="w-5 h-5 text-red-400"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Terima jadi
-                        </span>
-                      </div>
+                      <button
+                        onClick={() => {
+                          window.open("https://wa.me/6283865422026", "_blank");
+                        }}
+                        className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none"
+                      >
+                        Pilih Paket
+                      </button>
                     </div>
-                    <button
-                      onClick={() => {
-                        window.open("https://wa.me/6283865422026", "_blank");
-                      }}
-                      className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+                    <div
+                      className={`flex flex-col w-full p-8 space-y-8 text-center border-2 border-gray-200 rounded-lg ${
+                        theme === "dark"
+                          ? "bg-[#0f172a] border-gray-700"
+                          : "bg-white border-gray-200"
+                      } `}
                     >
-                      Pilih Paket
-                    </button>
-                  </div>
-                  <div
-                    className={`border border-slate-400 px-6 py-4 transition-colors duration-300 transform rounded-lg ${
-                      theme === "dark"
-                        ? "hover:bg-gray-800"
-                        : "hover:bg-gray-200"
-                    }`}
-                  >
-                    <p
-                      className={`text-lg font-medium ${
-                        theme === "dark" ? "text-gray-100" : "text-gray-800"
-                      }`}
-                    >
-                      Request Bouquet
-                    </p>
-                    <h4
-                      className={`mt-2 text-3xl font-semibold ${
-                        theme === "dark" ? "text-gray-100" : "text-gray-800"
-                      }`}
-                    >
-                      50k - 90k{" "}
-                      <span className="text-base font-normal text-gray-600 dark:text-gray-400">
-                        / Pcs
-                      </span>
-                    </h4>
-                    <p className="mt-4 text-gray-500 dark:text-gray-300">
-                      For most businesses that want to optimaize web queries.
-                    </p>
-                    <div className="mt-8 space-y-8">
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
+                      <div className="flex-shrink-0">
+                        <h2
+                          className={`inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg ${
+                            theme === "dark" ? "bg-gray-700" : "bg-gray-50"
+                          } `}
                         >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                          Money Bouquet
+                        </h2>
+                      </div>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Garansi tepat waktu
+                      <div className="flex-shrink-0">
+                        <span
+                          className={`pt-2 text-3xl font-bold  uppercase  ${
+                            theme === "dark" ? "text-gray-100" : "text-gray-800"
+                          } `}
+                        >
+                          Start From
                         </span>
                       </div>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                      <ul className="flex-1 space-y-4">
+                        <li className="text-gray-500 dark:text-gray-400">
+                          10-15 Lembar : 55K
+                        </li>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Pengantar sesuai perjanjian
-                        </span>
-                      </div>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          20-30 Lembar : 60K
+                        </li>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          50-100 Lembar : 90K
+                        </li>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Bebas request model
+                        </li>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          By request
-                        </span>
-                      </div>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          Bebas request warna
+                        </li>
+                      </ul>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Tag card puisi
-                        </span>
-                      </div>
-
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="w-5 h-5 text-red-400"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Terima jadi
-                        </span>
-                      </div>
+                      <button
+                        onClick={() => {
+                          window.open("https://wa.me/6283865422026", "_blank");
+                        }}
+                        className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none"
+                      >
+                        Pilih Paket
+                      </button>
                     </div>
-                    <button
-                      onClick={() => {
-                        window.open("https://wa.me/6283865422026", "_blank");
-                      }}
-                      className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+                    <div
+                      className={`flex flex-col w-full p-8 space-y-8 text-center border-2 border-gray-200 rounded-lg ${
+                        theme === "dark"
+                          ? "bg-[#0f172a] border-gray-700"
+                          : "bg-white border-gray-200"
+                      } `}
                     >
-                      Pilih Paket
-                    </button>
-                  </div>
-                  <div
-                    className={`border border-slate-400 px-6 py-4 transition-colors duration-300 transform rounded-lg ${
-                      theme === "dark"
-                        ? "hover:bg-gray-800"
-                        : "hover:bg-gray-200"
-                    }`}
-                  >
-                    <p
-                      className={`text-lg font-medium ${
-                        theme === "dark" ? "text-gray-100" : "text-gray-800"
-                      }`}
-                    >
-                      Premium Bouquet
-                    </p>
-                    <h4
-                      className={`mt-2 text-3xl font-semibold ${
-                        theme === "dark" ? "text-gray-100" : "text-gray-800"
-                      }`}
-                    >
-                      50k - 90k{" "}
-                      <span className="text-base font-normal text-gray-600 dark:text-gray-400">
-                        / Pcs
-                      </span>
-                    </h4>
-                    <p className="mt-4 text-gray-500 dark:text-gray-300">
-                      For most businesses that want to optimaize web queries.
-                    </p>
-                    <div className="mt-8 space-y-8">
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
+                      <div className="flex-shrink-0">
+                        <h2
+                          className={`inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg ${
+                            theme === "dark" ? "bg-gray-700" : "bg-gray-50"
+                          } `}
                         >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                          Balloon Bouquet
+                        </h2>
+                      </div>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Garansi tepat waktu
+                      <div className="flex-shrink-0">
+                        <span
+                          className={`pt-2 text-3xl font-bold  uppercase  ${
+                            theme === "dark" ? "text-gray-100" : "text-gray-800"
+                          } `}
+                        >
+                          Start From
                         </span>
                       </div>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                      <ul className="flex-1 space-y-4">
+                        <li className="text-gray-500 dark:text-gray-400">
+                          4 Tangkai 24K
+                        </li>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Pengantar sesuai perjanjian
-                        </span>
-                      </div>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          6 Tangkai 37K
+                        </li>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          8 Tangkai 50K
+                        </li>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          10 Tangkai 63K
+                        </li>
 
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          By request
-                        </span>
-                      </div>
+                        <li className="text-gray-500 dark:text-gray-400">
+                          12 Tangkai 74K
+                        </li>
+                      </ul>
 
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Tag card puisi
-                        </span>
-                      </div>
-
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 text-blue-500"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-
-                        <span className="mx-4 text-gray-700 dark:text-gray-300">
-                          Terima jadi
-                        </span>
-                      </div>
+                      <button
+                        onClick={() => {
+                          window.open("https://wa.me/6283865422026", "_blank");
+                        }}
+                        className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none"
+                      >
+                        Pilih Paket
+                      </button>
                     </div>
-                    <button
-                      onClick={() => {
-                        window.open("https://wa.me/6283865422026", "_blank");
-                      }}
-                      className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
-                    >
-                      Pilih Paket
-                    </button>
                   </div>
                 </div>
               </ModalBody>

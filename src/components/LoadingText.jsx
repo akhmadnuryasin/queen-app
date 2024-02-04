@@ -14,7 +14,7 @@ const LoadingText = () => {
       <p
         className={`${theme === "dark" ? "text-white" : "text-black"} sambutan`}
       >
-        Hallo 😇, Selamat datang di Queen Bouquet
+        Hallo Queen, Selamat datang 😇.
       </p>
     </motion.div>
   );
